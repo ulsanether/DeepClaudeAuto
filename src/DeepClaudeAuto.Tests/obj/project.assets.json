@@ -1,7 +1,7 @@
 {
-  "version": 4,
+  "version": 3,
   "targets": {
-    "net8.0-windows": {
+    "net8.0-windows7.0": {
       "Castle.Core/5.1.1": {
         "type": "package",
         "dependencies": {
@@ -5785,7 +5785,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0-windows": [
+    "net8.0-windows7.0": [
       "DeepClaudeAuto.Core >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.8.0",
       "Moq >= 4.20.72",
@@ -5795,33 +5795,45 @@
     ]
   },
   "packageFolders": {
-    "/home/runner/.nuget/packages/": {}
+    "C:\\Users\\hakmin\\.nuget\\packages\\": {},
+    "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/runner/work/DeepClaudeAuto/DeepClaudeAuto/src/DeepClaudeAuto.Tests/DeepClaudeAuto.Tests.csproj",
+      "projectUniqueName": "D:\\GIT\\DeepClaudeAuto\\src\\DeepClaudeAuto.Tests\\DeepClaudeAuto.Tests.csproj",
       "projectName": "DeepClaudeAuto.Tests",
-      "projectPath": "/home/runner/work/DeepClaudeAuto/DeepClaudeAuto/src/DeepClaudeAuto.Tests/DeepClaudeAuto.Tests.csproj",
-      "packagesPath": "/home/runner/.nuget/packages/",
-      "outputPath": "/home/runner/work/DeepClaudeAuto/DeepClaudeAuto/src/DeepClaudeAuto.Tests/obj/",
+      "projectPath": "D:\\GIT\\DeepClaudeAuto\\src\\DeepClaudeAuto.Tests\\DeepClaudeAuto.Tests.csproj",
+      "packagesPath": "C:\\Users\\hakmin\\.nuget\\packages\\",
+      "outputPath": "D:\\GIT\\DeepClaudeAuto\\src\\DeepClaudeAuto.Tests\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/runner/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\hakmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0-windows"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "D:\\nupkg": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0-windows": {
-          "framework": "net8.0-windows7.0",
+        "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "/home/runner/work/DeepClaudeAuto/DeepClaudeAuto/src/DeepClaudeAuto.Core/DeepClaudeAuto.Core.csproj": {
-              "projectPath": "/home/runner/work/DeepClaudeAuto/DeepClaudeAuto/src/DeepClaudeAuto.Core/DeepClaudeAuto.Core.csproj"
+            "D:\\GIT\\DeepClaudeAuto\\src\\DeepClaudeAuto.Core\\DeepClaudeAuto.Core.csproj": {
+              "projectPath": "D:\\GIT\\DeepClaudeAuto\\src\\DeepClaudeAuto.Core\\DeepClaudeAuto.Core.csproj"
             }
           }
         }
@@ -5836,11 +5848,10 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "10.0.300"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
-      "net8.0-windows": {
-        "framework": "net8.0-windows7.0",
+      "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
@@ -5875,18 +5886,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.29, 8.0.29]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.314/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
