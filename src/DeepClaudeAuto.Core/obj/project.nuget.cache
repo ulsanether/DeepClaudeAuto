@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "5j0uV9oOGas=",
+  "success": true,
+  "projectFilePath": "/home/runner/work/DeepClaudeAuto/DeepClaudeAuto/src/DeepClaudeAuto.Core/DeepClaudeAuto.Core.csproj",
+  "expectedPackageFiles": [
+    "/home/runner/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.2/microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "/home/runner/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.3/microsoft.extensions.logging.abstractions.8.0.3.nupkg.sha512",
+    "/home/runner/.nuget/packages/microsoft.windowsdesktop.app.ref/8.0.29/microsoft.windowsdesktop.app.ref.8.0.29.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,12 @@
+/home/runner/work/DeepClaudeAuto/DeepClaudeAuto/src/DeepClaudeAuto.Core/obj/Release/net8.0-windows/DeepClaudeAuto.Core.csproj.AssemblyReference.cache
+/home/runner/work/DeepClaudeAuto/DeepClaudeAuto/src/DeepClaudeAuto.Core/obj/Release/net8.0-windows/DeepClaudeAuto.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/work/DeepClaudeAuto/DeepClaudeAuto/src/DeepClaudeAuto.Core/obj/Release/net8.0-windows/DeepClaudeAuto.Core.AssemblyInfoInputs.cache
+/home/runner/work/DeepClaudeAuto/DeepClaudeAuto/src/DeepClaudeAuto.Core/obj/Release/net8.0-windows/DeepClaudeAuto.Core.AssemblyInfo.cs
+/home/runner/work/DeepClaudeAuto/DeepClaudeAuto/src/DeepClaudeAuto.Core/obj/Release/net8.0-windows/DeepClaudeAuto.Core.csproj.CoreCompileInputs.cache
+/home/runner/work/DeepClaudeAuto/DeepClaudeAuto/src/DeepClaudeAuto.Core/bin/Release/net8.0-windows/DeepClaudeAuto.Core.deps.json
+/home/runner/work/DeepClaudeAuto/DeepClaudeAuto/src/DeepClaudeAuto.Core/bin/Release/net8.0-windows/DeepClaudeAuto.Core.dll
+/home/runner/work/DeepClaudeAuto/DeepClaudeAuto/src/DeepClaudeAuto.Core/bin/Release/net8.0-windows/DeepClaudeAuto.Core.pdb
+/home/runner/work/DeepClaudeAuto/DeepClaudeAuto/src/DeepClaudeAuto.Core/obj/Release/net8.0-windows/DeepClaudeAuto.Core.dll
+/home/runner/work/DeepClaudeAuto/DeepClaudeAuto/src/DeepClaudeAuto.Core/obj/Release/net8.0-windows/refint/DeepClaudeAuto.Core.dll
+/home/runner/work/DeepClaudeAuto/DeepClaudeAuto/src/DeepClaudeAuto.Core/obj/Release/net8.0-windows/DeepClaudeAuto.Core.pdb
+/home/runner/work/DeepClaudeAuto/DeepClaudeAuto/src/DeepClaudeAuto.Core/obj/Release/net8.0-windows/ref/DeepClaudeAuto.Core.dll
