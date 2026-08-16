@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DeepClaudeAuto.App/DeepClaudeAuto.App.csproj" />
+    <Project Path="src/DeepClaudeAuto.Core/DeepClaudeAuto.Core.csproj" />
+    <Project Path="src/DeepClaudeAuto.Tests/DeepClaudeAuto.Tests.csproj" />
+    <Project Path="src/DeepClaudeAuto.UI/DeepClaudeAuto.UI.csproj" />
+  </Folder>
+</Solution>

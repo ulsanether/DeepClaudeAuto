@@ -1,0 +1,71 @@
+<UserControl x:Class="DeepClaudeAuto.UI.Views.Steps.Step06_ServerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="#1E1E2E">
+
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,16">
+            <TextBlock Text="🚀  Step 6 — 서버 실행 &amp; 모니터링"
+                       FontSize="22" FontWeight="Bold" Foreground="#89B4FA"/>
+            <TextBlock Text="DeepClaude 서버를 시작하고 상태를 확인합니다."
+                       FontSize="13" Foreground="#6C7086" Margin="0,4,0,0"/>
+        </StackPanel>
+
+        <!-- 서버 상태 카드 -->
+        <Border Grid.Row="1" Style="{StaticResource CardStyle}" Margin="0,0,0,16">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Width="12" Height="12" Margin="0,0,8,0"
+                                 Fill="{Binding ServerStatus, Converter={StaticResource ServerStatusToBrush}}"/>
+                        <TextBlock Text="{Binding ServerStatus, Converter={StaticResource ServerStatusToLabel}}"
+                                   FontWeight="Bold" FontSize="16"/>
+                    </StackPanel>
+                    <TextBlock Text="{Binding ServerAddress}"
+                               Foreground="#89B4FA" FontFamily="Consolas"
+                               Cursor="Hand" MouseLeftButtonUp="OnAddressClick"
+                               Margin="0,6,0,0"
+                               Visibility="{Binding IsRunning, Converter={StaticResource BoolToVis}}"/>
+                </StackPanel>
+                <Button Grid.Column="1"
+                        Content="🌐  브라우저 열기"
+                        Command="{Binding OpenBrowserCommand}"
+                        Style="{StaticResource SecondaryButtonStyle}"
+                        Visibility="{Binding IsRunning, Converter={StaticResource BoolToVis}}"
+                        VerticalAlignment="Center"/>
+            </Grid>
+        </Border>
+
+        <!-- 로그 -->
+        <ListBox Grid.Row="2"
+                 ItemsSource="{Binding LogLines}"
+                 Style="{StaticResource LogListBoxStyle}"
+                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+
+        <!-- 버튼 -->
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,16,0,0">
+            <Button Content="⏹  서버 중지"
+                    Command="{Binding StopServerCommand}"
+                    Style="{StaticResource SecondaryButtonStyle}"
+                    Visibility="{Binding IsRunning, Converter={StaticResource BoolToVis}}"
+                    Margin="0,0,10,0" Width="110"/>
+            <Button Content="▶  서버 시작"
+                    Command="{Binding StartServerCommand}"
+                    Style="{StaticResource PrimaryButtonStyle}"
+                    Visibility="{Binding IsStopped, Converter={StaticResource BoolToVis}}"
+                    Width="110"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
