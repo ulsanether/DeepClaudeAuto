@@ -59,7 +59,9 @@ public sealed partial class BuildViewModel : ObservableObject
                 config.DeepClaudeRepoUrl, config.InstallPath, Log, ct);
 
             await _builder.WriteEnvFileAsync(config, config.InstallPath);
-            Log("[INFO] .env 파일 작성 완료");
+            await _builder.SyncConfigTomlAsync(config.InstallPath, config.ServerPort);
+            await _builder.PatchCargoTomlAsync(config.InstallPath);
+            Log("[INFO] .env / config.toml 작성 완료");
 
             await _builder.InstallDependenciesAsync(
                 config.InstallPath, config.BuildMode, Log, ct);

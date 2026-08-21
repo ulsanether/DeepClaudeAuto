@@ -19,7 +19,7 @@
             <Border Style="{StaticResource CardStyle}">
                 <StackPanel>
                     <TextBlock Text="빌드 방식" FontWeight="SemiBold" Margin="0,0,0,10"/>
-                    <RadioButton Content="소스 빌드 (Python / Rust)"
+                    <RadioButton Content="소스 빌드 (Rust / Cargo)"
                                  IsChecked="{Binding SelectedMode,
                                              Converter={StaticResource EqualityConv},
                                              ConverterParameter=Source}"

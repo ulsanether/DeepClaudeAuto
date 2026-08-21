@@ -1,5 +1,5 @@
 using System.Diagnostics;
-using System.Net.Http;
+using System.Net.Sockets;
 using DeepClaudeAuto.Core.Models;
 using DeepClaudeAuto.Core.Services;
 using Microsoft.Extensions.Logging;
@@ -31,8 +31,15 @@ public sealed class ServerManager : IServerManager, IDisposable
         SetStatus(ServerStatus.Starting, config.ServerPort);
 
         var (cmd, args) = config.BuildMode == "Docker"
-            ? ("docker", $"run --rm -p {config.ServerPort}:3000 --env-file .env deepclaude")
-            : ("python", $"-m uvicorn main:app --port {config.ServerPort}");
+            ? ("docker", $"run --rm -p {config.ServerPort}:1337 deepclaude")
+            : (Path.Combine(config.InstallPath, "target", "release", "deepreasoning.exe"), string.Empty);
+
+        if (config.BuildMode != "Docker" && !File.Exists(cmd))
+        {
+            _logger.LogError("실행 파일을 찾을 수 없습니다: {path}. 5단계(빌드)를 먼저 실행하세요.", cmd);
+            SetStatus(ServerStatus.Failed, config.ServerPort);
+            return;
+        }
 
         _process = new Process
         {
@@ -85,11 +92,14 @@ public sealed class ServerManager : IServerManager, IDisposable
 
     public async Task<bool> HealthCheckAsync(int port, CancellationToken cancellationToken = default)
     {
+        // deepreasoning에는 /health 라우트가 없으므로 TCP 연결 성공 여부로 리슨 상태를 판정합니다.
         try
         {
-            using var client = new HttpClient { Timeout = TimeSpan.FromSeconds(2) };
-            var response = await client.GetAsync($"http://localhost:{port}/health", cancellationToken);
-            return response.IsSuccessStatusCode;
+            using var client = new TcpClient();
+            using var timeoutCts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
+            timeoutCts.CancelAfter(TimeSpan.FromSeconds(2));
+            await client.ConnectAsync("127.0.0.1", port, timeoutCts.Token);
+            return true;
         }
         catch
         {
